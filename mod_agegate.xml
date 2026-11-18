@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_AGEGATE</name>
+    <version>1.1.1</version>
+    <description>MOD_AGEGATE_XML_DESCRIPTION</description>
+    <namespace path="src">Acme\Module\AgeGate</namespace>
+    <files>
+        <filename module="mod_agegate">mod_agegate.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="mod_agegate" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/mod_agegate.ini</language>
+        <language tag="en-GB">en-GB/mod_agegate.sys.ini</language>
+        <language tag="el-GR">el-GR/mod_agegate.ini</language>
+        <language tag="el-GR">el-GR/mod_agegate.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="choice_days"
+                    type="number"
+                    label="MOD_AGEGATE_FIELD_CHOICE_DAYS_LABEL"
+                    description="MOD_AGEGATE_FIELD_CHOICE_DAYS_DESC"
+                    default="10"
+                    min="1"
+                    max="365"
+                    step="1"
+                    filter="integer"
+                    required="true"
+                />
+                <field
+                    name="redirect_url"
+                    type="url"
+                    label="MOD_AGEGATE_FIELD_REDIRECT_URL_LABEL"
+                    description="MOD_AGEGATE_FIELD_REDIRECT_URL_DESC"
+                    filter="url"
+                    hint="https://example.com/under-18"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

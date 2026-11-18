@@ -1,0 +1,6 @@
+# Generated Joomla installation package
+mod_agegate.zip
+
+# Operating system files
+.DS_Store
+Thumbs.db
